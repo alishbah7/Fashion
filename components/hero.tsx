@@ -7,7 +7,7 @@ import Star from '../public/images/star.png';
 export default function Hero() {
     return(
         <div className='w-[100%] flex justify-center items-center overflow-hidden'>
-            <div className='flex flex-row max-[1180px]:flex-col max-[1180px]:pt-[20px] max-[350px]:h-[110vh] max-[360px]:h-[122vh] max-[768px]:h-[144vh] max-[1180px]:h-[158vh] max-[1180px]:px-[0] justify-between items-center pt-[130px] lg:px-[40px] xl:px-[80px] w-[90%] h-[80vh] rounded-3xl bgMain'>
+            <div className='flex flex-row max-[1180px]:flex-col max-[1180px]:pt-[20px] max-[500px]:h-auto max-[768px]:h-[144vh] max-[1180px]:h-[158vh] max-[1180px]:px-[0] justify-between items-center pt-[130px] lg:px-[40px] xl:px-[80px] w-[90%] h-[80vh] rounded-3xl bgMain'>
                 <div className='flex flex-col gap-[10px] mb-[120px] max-[1180px]:items-center'>
                     <div className="flex flex-col gap-[10px] max-[1180px]:gap-[20px] max-[360px]:gap-[5px]">
                         <h1 className="max-[360px]:text-[35px] max-[360px]:w-[220px] max-[500px]:text-[50px] max-[500px]:w-[260px] max-[1180px]:text-[70px] text-6xl w-[300px] py-[10px] px-[20px] font-black bgLets">LETS</h1>
@@ -18,7 +18,7 @@ export default function Hero() {
                     <p className='max-[360px]:text-[12px] max-[360px]:pl-[0px] max-[500px]:tracking-normal max-[500px]:text-[15px] pl-[20px] font-sans text-[20px] tracking-wider'>Live for Influential and Innovative fashion!</p>
                     <Button className='max-[360px]:ml-[0px] ml-[20px] h-[40px] w-[100px]'>Shop Now</Button>
                 </div>
-                <div className="relative mt-[90px] w-[400px] md:w-[550px] h-[600px] max-[1180px]:mt-[-80px] max-[500px]:ml-[100px] max-[350px]:ml-[150px]">
+                <div className="relative mt-[90px] w-[400px] md:w-[550px] max-[350px]:h-[220px] max-[500px]:h-[260px] h-[600px] max-[1180px]:mt-[-80px] max-[500px]:ml-[100px] max-[350px]:ml-[150px]">
                     <Image
                         src={HeroMain}
                         alt="shopping background"
