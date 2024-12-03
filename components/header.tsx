@@ -1,3 +1,7 @@
+'use client';
+import { useEffect } from 'react';
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -6,8 +10,11 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 
 export default function Header() {
+  useEffect(() => {
+    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
+}, []);
   return (
-    <header className='flex justify-between py-[25px] px-[5%]'>
+    <header className='flex justify-between py-[25px] px-[5%]'  data-aos='fade-down'>
         <div>
             <Image src={logo} alt='fashion logo' className='h-auto w-[100px] sm:w-[140px]'/>
         </div>

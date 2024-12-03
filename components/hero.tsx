@@ -1,13 +1,21 @@
+
+'use client';
+import { useEffect } from 'react';
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import HeroMain from '../public/images/heromain.png';
 import Star from '../public/images/star.png';
 
 export default function Hero() {
+    useEffect(() => {
+        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
+}, []);
     return(
         <div className='w-[100%] flex justify-center items-center overflow-hidden'>
             <div className='flex flex-row max-[1180px]:flex-col max-[1180px]:pt-[20px] max-[500px]:h-auto max-[768px]:h-[144vh] max-[1180px]:h-[158vh] max-[1180px]:px-[0] justify-between items-center pt-[130px] lg:px-[40px] xl:px-[80px] w-[90%] h-[80vh] rounded-3xl bgMain'>
-                <div className='flex flex-col gap-[10px] mb-[120px] max-[1180px]:items-center'>
+                <div className='flex flex-col gap-[10px] mb-[120px] max-[1180px]:items-center'  data-aos='zoom-in'>
                     <div className="flex flex-col gap-[10px] max-[1180px]:gap-[20px] max-[360px]:gap-[5px]">
                         <h1 className="max-[360px]:text-[35px] max-[360px]:w-[220px] max-[500px]:text-[50px] max-[500px]:w-[260px] max-[1180px]:text-[70px] text-6xl w-[300px] py-[10px] px-[20px] font-black bgLets">LETS</h1>
                         <h1 className="max-[360px]:text-[35px] max-[500px]:text-[50px] max-[1180px]:text-[70px] text-6xl font-black pl-[20px]">EXPLORE</h1>
@@ -22,26 +30,31 @@ export default function Hero() {
                         src={HeroMain}
                         alt="shopping background"
                         className="max-[500px]:w-[300px] max-[350px]:w-[250px] w-[500px]"
+                        data-aos='fade-left'
                     />
                     <Image
                         src={Star}
                         alt="star"
                         className="absolute w-[30px] top-[2%] left-[-3%] max-[388px]:w-[20px] max-[350px]:left-[2%] max-[290px]:w-[15px]"
+                        data-aos='zoom-in'
                     />
                     <Image
                         src={Star}
                         alt="star"
                         className="absolute w-[30px] top-[65%] left-[2%] max-[1180px]:top-[85%] max-[388px]:w-[20px] max-[290px]:w-[15px]" 
+                        data-aos='zoom-in'
                     />
                     <Image
                         src={Star}
                         alt="star"
                         className="absolute w-[30px] top-[60%] right-[10%] max-[1180px]:top-[80%] max-[768px]:right-[2%] max-[500px]:right-[25%] max-[388px]:w-[20px] max-[350px]:left-[55%] max-[350px]:top-[75%] max-[290px]:w-[15px]"
+                        data-aos='zoom-in'
                     />
                     <Image
                         src={Star}
                         alt="star"
                         className="absolute w-[30px] top-[7%] right-[15%] max-[500px]:right-[30%] max-[388px]:w-[20px] max-[350px]:left-[45%] max-[290px]:w-[15px]"
+                        data-aos='zoom-in'
                     />
                 </div>
             </div>
