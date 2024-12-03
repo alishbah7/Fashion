@@ -20,7 +20,7 @@ export default function Download(){
                 <Image src={Btns} alt="buttons" className="h-auto w-[300px]" data-aos='fade-right'/>
             </div>
             <div>
-                <Image data-aos='zoom-in' src={mobile} alt="mobile" className="h-auto w-[400px]"/>
+                <Image data-aos='zoom-in' src={mobile} alt="mobile" className="h-auto max-[400px]:w-[250px] w-[400px]"/>
             </div>
         </div>
     )
