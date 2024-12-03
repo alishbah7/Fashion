@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import HeroMain from '../public/images/heromain.png';
 import Star from '../public/images/star.png';
