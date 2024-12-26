@@ -41,8 +41,8 @@ export default async function ProductsPage() {
     {/* flex flex-col justify-center items-center */}
     <div className='grid grid-cols-2 sm:grid sm:grid-cols-3 md:grid-cols-4 gap-6 py-[38px] px-[20px] sm:px-[50px]'>
         {products.map((product) => (
-          <Link href={''} data-aos='zoom-in'>
-            <div key={product.id}>
+          <Link href={''} data-aos='zoom-in' key={product.id}>
+            <div>
               <Image src={product.image} alt='shopping website image' className='h-auto w-[250px] xl:w-[300px]' width={300} height={200}/>
               <div className='flex justify-between pt-[10px]'>
                 <div>
