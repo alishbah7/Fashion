@@ -29,8 +29,9 @@ const Catalogue = () => {
 
   return (
     <div>
+
       {/* Catalogue Section */}
-      <div className='h-screen'>
+      <div className='h-auto lg:h-screen'>
         <h1 className="flex items-center justify-center text-[25px] font-extrabold mt-[30px]" data-aos='fade-right'>
           CATALOGUE
         </h1>
@@ -45,7 +46,7 @@ const Catalogue = () => {
 
       {/* Gallery Section */}
       <div>
-        <div className='flex flex-col items-center justify-center h-screen'>
+        <div className='flex flex-col items-center justify-center h-auto lg:h-screen'>
           <h1 className="flex items-center justify-center text-[25px] font-extrabold mt-[30px]" data-aos='fade-right'>
             GALLERY
           </h1>
@@ -60,7 +61,7 @@ const Catalogue = () => {
           </div>
         </div>
 
-        <div className='flex flex-col justify-center h-screen w-[100%]'>
+        <div className='flex flex-col justify-center h-auto lg:h-screen w-[100%]'>
           <h1 className="flex items-center justify-center md:justify-start text-[20px] sm:text-[25px] font-bold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
             #YourFashionTrends
           </h1>
@@ -74,7 +75,7 @@ const Catalogue = () => {
         </div>
 
         {/* Shop by Seasons */}
-        <div className='h-screen'>
+        <div className='h-auto lg:h-screen'>
           <h1 className="flex items-center justify-center md:justify-start text-[20px] sm:text-[25px] font-bold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
             #ShopBySeasons
           </h1>
@@ -96,6 +97,7 @@ const Catalogue = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
