@@ -20,15 +20,15 @@ export default function Header() {
         </div>
         <div className='hidden md:block'>
             <ul className='flex gap-[40px]'>
-                <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Catalogue</Link></li>
-                <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Fashion</Link></li>
+                <li className='mt-[6px]'><Link href={'/catalogue'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Catalogue</Link></li>
+                <li className='mt-[6px]'><Link href={'/products'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Products</Link></li>
                 <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Favourite</Link></li>
                 <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Lifestyle</Link></li>
-                <li><Link href={''}><Button>Sign Up</Button></Link></li>
+                <li><Link href={''}><Button>Cart</Button></Link></li>
             </ul>
         </div>
         <div className='flex gap-[5px] md:hidden'>
-          <Link href={''} className='font-sans'><Button className=''>Sign Up</Button></Link>
+          <Link href={''} className='font-sans'><Button className=''>Cart</Button></Link>
           <Sheet>
             <SheetTrigger>
               <Menu className='block md:hidden w-[30px] h-[25px]'/>
@@ -36,8 +36,8 @@ export default function Header() {
               <SheetContent>
               <div className='block md:hidden'>
                 <ul className='flex flex-col gap-[40px]'>
-                    <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Catalogue</Link></li>
-                    <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Fashion</Link></li>
+                    <li className='mt-[6px]'><Link href={'/catalogue'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Catalogue</Link></li>
+                    <li className='mt-[6px]'><Link href={'/products'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Products</Link></li>
                     <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Favourite</Link></li>
                     <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Lifestyle</Link></li>
                 </ul>
