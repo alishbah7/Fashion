@@ -9,7 +9,7 @@ export default function Footer(){
         AOS.init({ duration: 2000, easing: 'ease'});
     }, []);
     return(
-        <footer className="bg-black text-white py-8" data-aos='fade' data-aos-delay="1500">
+        <footer className="bg-black text-white py-8" data-aos='fade' data-aos-delay="1000">
         <div className="container mx-auto grid grid-cols-1 xl:grid-cols-12 gap-6 px-6">
           <div className="xl:col-span-5" data-aos='fade-right'>
             <h3 className="font-black mb-4 text-[40px]">FASHION</h3>
