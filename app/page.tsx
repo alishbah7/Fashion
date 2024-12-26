@@ -8,7 +8,6 @@ import Hero from "@/components/hero";
 import Sale from "@/components/sale";
 import Fav from "@/components/fav";
 import Download from "@/components/download";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function Home() {
   useEffect(() => {

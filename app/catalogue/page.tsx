@@ -20,21 +20,25 @@ const Catalogue = () => {
   ];
   const galleryItems = [
     {
+      id: 1,
       image: '/images/gallimg1.jpg',
       title: 'Hoodies',
       link: '/'
     },
     {
+      id: 2,
       image: '/images/gallimg2.jpg',
       title: 'Jackets',
       link: '/'
     },
     {
+      id: 3,
       image: '/images/gallimg3.png',
       title: 'Sweatshirts',
       link: '/'
     },
     {
+      id: 4,
       image: '/images/gallimg4.jpg',
       title: 'T-Shirts',
       link: '/'
@@ -68,7 +72,7 @@ const Catalogue = () => {
           <h1 className="flex items-center justify-center md:justify-start text-[20px] sm:text-[25px] font-bold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>#YourFashionTrends</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
             {galleryItems.map((item, index) => (
-              <Link href={item.link} data-aos='zoom-in'>
+              <Link href={item.link} key={item.id} data-aos='zoom-in'>
               <GalleryCards
                 key={index}
                 image={item.image}

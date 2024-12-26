@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-let myProducts = [
+const myProducts = [
   { id: 1, image: '/images/hoodie1.jpg', name: 'Paradise 1970', description: 'Bluish hoodie with exotic print on it. Experience comfort and style with our premium hoodie, crafted from ultra-soft, high-quality fabric for all-day coziness. Designed with a relaxed fit, it features a spacious front pocket, adjustable drawstring hood, and ribbed cuffs for a snug feel.' , price: 200 },
   { id: 2, image: '/images/hoodie2.jpg', name: 'Perfect', description: 'Light purple "PERFECT" hoodie. Experience comfort and style with our premium hoodie, crafted from ultra-soft, high-quality fabric for all-day coziness. Designed with a relaxed fit, it features a spacious front pocket, adjustable drawstring hood, and ribbed cuffs for a snug feel.', price: 150 },
   { id: 3, image: '/images/hoodie3.jpg', name: 'Brownie', description: 'Simple but great (like your dreams) in fabric. Experience comfort and style with our premium hoodie, crafted from ultra-soft, high-quality fabric for all-day coziness. Designed with a relaxed fit, it features a spacious front pocket, adjustable drawstring hood, and ribbed cuffs for a snug feel.', price: 120 },
