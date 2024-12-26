@@ -62,7 +62,7 @@ const Catalogue = () => {
         </div>
 
         <div className='flex flex-col justify-center h-auto lg:h-screen w-[100%]'>
-          <h1 className="flex items-center justify-center md:justify-start text-[20px] sm:text-[25px] font-bold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
+          <h1 className="flex items-center justify-center md:justify-start text-[25px] font-extrabold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
             #YourFashionTrends
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
@@ -76,7 +76,7 @@ const Catalogue = () => {
 
         {/* Shop by */}
         <div className='h-auto lg:h-screen'>
-          <h1 className="flex items-center justify-center md:justify-start text-[20px] sm:text-[25px] font-bold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
+          <h1 className="flex items-center justify-center md:justify-start text-[25px] font-extrabold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
             #ShopBy....
           </h1>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-[20px] md:gap-[20px] mt-5 px-[14px] mb-[40px]">
