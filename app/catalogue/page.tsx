@@ -74,10 +74,10 @@ const Catalogue = () => {
           </div>
         </div>
 
-        {/* Shop by Seasons */}
+        {/* Shop by */}
         <div className='h-auto lg:h-screen'>
           <h1 className="flex items-center justify-center md:justify-start text-[20px] sm:text-[25px] font-bold font-[cursive] tracking-wide mt-[30px] md:ml-[20px]" data-aos='fade-right'>
-            #ShopBySeasons
+            #ShopBy....
           </h1>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-[20px] md:gap-[20px] mt-5 px-[14px] mb-[40px]">
             <div>
@@ -97,7 +97,7 @@ const Catalogue = () => {
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 };
