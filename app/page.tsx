@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Arrivals from "@/components/arrivals";
 import BrandsSlider from "@/components/brandsSlider";
@@ -10,9 +8,6 @@ import Fav from "@/components/fav";
 import Download from "@/components/download";
 
 export default function Home() {
-  useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
   return (
     <div className='overflow-hidden'>
       <Hero />
@@ -22,6 +17,7 @@ export default function Home() {
       <Fav />
       <Download />
 
+      {/*----===== NEWSLETTER =====----*/}
       <div className="bg-yellow-400 text-center flex flex-col items-center justify-center h-[50vh]">
         <h2 data-aos='fade-down' className="block text-3xl font-black text-white mb-[25px] tracking-wide max-[550px]:text-[18px] max-[330px]:hidden">
           JOIN SHOPPING COMMUNITY <br /> TO GET MONTHLY PROMO

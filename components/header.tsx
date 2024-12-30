@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -8,13 +6,35 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import logo from '../public/images/logo.png';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const [cartQuantity, setCartQuantity] = useState(0);
+
+  // Function to calculate total quantity
+  const calculateCartQuantity = () => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const totalQuantity = cart.reduce((total: number, item: { quantity: number }) => total + item.quantity, 0);
+    setCartQuantity(totalQuantity);
+  };
+
   useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
+    calculateCartQuantity(); // Calculate on initial render
+
+    // Real-time updates via CustomEvent
+    const handleCartUpdate = () => {
+      calculateCartQuantity();
+    };
+
+    window.addEventListener('cartUpdated', handleCartUpdate);
+
+    return () => {
+      window.removeEventListener('cartUpdated', handleCartUpdate);
+    };
+  }, []);
+
   return (
-    <header className='flex justify-between py-[25px] px-[5%]'  data-aos='fade-down'>
+    <header className='flex justify-between py-[25px] px-[5%]' data-aos='fade-down'>
         <div>
             <Image src={logo} alt='fashion logo' className='h-auto w-[100px] sm:w-[140px]'/>
         </div>
@@ -24,16 +44,32 @@ export default function Header() {
                 <li className='mt-[6px]'><Link href={'/products'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Products</Link></li>
                 <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Favourite</Link></li>
                 <li className='mt-[6px]'><Link href={''} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Lifestyle</Link></li>
-                <li><Link href={''}><Button>Cart</Button></Link></li>
+                <li>
+                    <Link href={'/cart'}>
+                        <Button>
+                            Cart 
+                            <div className='w-[20px] h-[20px] bg-white rounded-full text-black flex items-center justify-center'>
+                                {cartQuantity}
+                            </div>
+                        </Button>
+                    </Link>
+                </li>
             </ul>
         </div>
         <div className='flex gap-[5px] md:hidden'>
-          <Link href={''} className='font-sans'><Button className=''>Cart</Button></Link>
+          <Link href={'/cart'} className='font-sans'>
+            <Button>
+              Cart 
+              <div className='w-[20px] h-[20px] bg-white rounded-full text-black flex items-center justify-center'>
+                {cartQuantity}
+              </div>
+            </Button>
+          </Link>
           <Sheet>
             <SheetTrigger>
               <Menu className='block md:hidden w-[30px] h-[25px]'/>
             </SheetTrigger>
-              <SheetContent>
+            <SheetContent>
               <div className='block md:hidden'>
                 <ul className='flex flex-col gap-[40px]'>
                     <li className='mt-[6px]'><Link href={'/catalogue'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Catalogue</Link></li>

@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import arrivalimg1 from '../public/images/arrivalimg1.jpg';
@@ -10,16 +8,18 @@ import arrivalsHeading from '../public/images/arrivalsheading.png';
 import { ArrowRight } from 'lucide-react';
 
 export default function Arrivals(){
-    useEffect(() => {
-        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
     return(
         <div>
+
+            {/*--=== TITLE ===--*/}
             <div className='max-[950px]:flex max-[950px]:items-center max-[950px]:justify-center max-[950px]:w-[100%]'>
                 <Image data-aos='fade-right' src={arrivalsHeading} alt='new arrivals' className='h-auto w-[300px] pt-[40px] ml-[100px] max-[950px]:ml-[0] max-[320px]:w-[250px]'/>
             </div>
             
+            {/*--=== NEW ARRIVALS CATEGORY ===--*/}
             <div className='mt-[20px] flex gap-[50px] items-center justify-center mainPro'>
+
+                {/*--=== 1 ===--*/}
                 <div data-aos='fade-up'>
                     <Image src={arrivalimg1} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
                     <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
@@ -33,6 +33,7 @@ export default function Arrivals(){
                     </div>
                 </div>
 
+                {/*--=== 2 ===--*/}
                 <div data-aos='fade-down'>
                     <Image src={arrivalimg2} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
                     <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
@@ -46,6 +47,7 @@ export default function Arrivals(){
                     </div>
                 </div>
 
+                {/*--=== 3 ===--*/}
                 <div data-aos='fade-up'>
                     <Image src={arrivalimg3} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
                     <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
@@ -58,7 +60,9 @@ export default function Arrivals(){
                         </div>
                     </div>
                 </div>
+                
             </div>
+
         </div>
     )
 }
