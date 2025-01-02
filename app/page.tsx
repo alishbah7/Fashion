@@ -1,4 +1,6 @@
 'use client';
+import AOS from 'aos'; 
+import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Arrivals from "@/components/arrivals";
 import BrandsSlider from "@/components/brandsSlider";
@@ -8,6 +10,9 @@ import Fav from "@/components/fav";
 import Download from "@/components/download";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
+  }, []); 
   return (
     <div className='overflow-hidden'>
       <Hero />

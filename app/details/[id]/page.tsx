@@ -37,8 +37,19 @@ export default async function ProductDetails({ params }: { params: { id: string 
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    window.dispatchEvent(new CustomEvent('cartUpdated')); // Dispatch event
-};
+    window.dispatchEvent(new CustomEvent('cartUpdated'));
+
+    const popup = document.getElementById('popUp');
+    if (popup) {
+      popup.classList.remove('hidden');
+      popup.classList.add('block');
+
+      setTimeout(() => {
+        popup.classList.remove('block');
+        popup.classList.add('hidden');
+      }, 1500);
+    }
+  };
 
   return (
     <div className="flex flex-col md:flex-row gap-[10px] xl:justify-between items-center rounded-md overflow-hidden md:px-[100px] xl:px-[230px] h-auto lg:h-[100vh] py-[60px]">
@@ -51,6 +62,7 @@ export default async function ProductDetails({ params }: { params: { id: string 
       {/*----===== DETAILS =====----*/}
       <div>
         <div className="p-[10px] sm:p-6 max-[400px]:w-[280px]">
+
           {/*----===== NAME & PRICE =====----*/}
           <div className="border-b border-gray-500 pb-[30px]">
             <h2 className="text-[30px] font-bold text-gray-800 xl:mt-[-50px] px-[14px]" data-aos="fade-left">{product.name}</h2>
@@ -61,13 +73,18 @@ export default async function ProductDetails({ params }: { params: { id: string 
           <p className="mt-[30px] text-gray-600 w-[380px] max-[400px]:w-[270px] px-[10px]" data-aos="fade-up">{product.description}</p>
           
           {/*----===== ADD TO CART BUTTON =====----*/}
-          <button onClick={addToCart} data-aos="fade-up" className="flex gap-[1px] mt-4 bg-black text-white py-2 px-4 rounded-md">
+          <button onClick={addToCart} data-aos='fade-up' className="flex gap-[1px] mt-4 bg-black text-white py-2 px-4 rounded-md">
             <i className="bx bx-cart pr-[6px] text-[20px]"></i>
             Add To Cart
           </button>
         </div>
       </div>
-      
+
+      {/*----===== CUSTOM POPUP =====----*/}
+      <div id="popUp" className="hidden fixed top-5 md:ml-[300px] bg-black text-white px-4 py-2 rounded-md shadow-lg z-50  animate-fade-in">
+        ✅ Item Added to Cart!
+      </div>
+
     </div>
   );
 }

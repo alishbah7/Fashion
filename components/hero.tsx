@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import HeroMain from '../public/images/heromain.png';
 import Star from '../public/images/star.png';
+import Link from 'next/link'
 
 export default function Hero() {
     return(
@@ -19,7 +20,7 @@ export default function Hero() {
                         <h1 className="max-[360px]:text-[35px] max-[500px]:text-[50px] max-[1180px]:text-[70px] text-6xl font-black pl-[20px]">CLOTHES.</h1>
                     </div>
                     <p className='max-[360px]:text-[12px] max-[360px]:pl-[0px] max-[500px]:tracking-normal max-[500px]:text-[15px] pl-[20px] font-sans text-[20px] tracking-wider'>Live for Influential and Innovative fashion!</p>
-                    <Button className='max-[360px]:ml-[0px] ml-[20px] h-[40px] w-[100px]'>Shop Now</Button>
+                    <Link href={'/products'}><Button className='max-[360px]:ml-[0px] ml-[20px] h-[40px] w-[100px]'>Shop Now</Button></Link>
                 </div>
 
                 {/*--=== IMAGE ===--*/}

@@ -6,6 +6,7 @@ import arrivalimg2 from '../public/images/arrivalimg2.png';
 import arrivalimg3 from '../public/images/arrivalimg3.png';
 import arrivalsHeading from '../public/images/arrivalsheading.png';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link'
 
 export default function Arrivals(){
     return(
@@ -20,46 +21,54 @@ export default function Arrivals(){
             <div className='mt-[20px] flex gap-[50px] items-center justify-center mainPro'>
 
                 {/*--=== 1 ===--*/}
-                <div data-aos='fade-up'>
-                    <Image src={arrivalimg1} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
-                    <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
-                        <div>
-                            <h4 className='fontHoodie font-semibold tracking-tighter text-[20px]'>Hoodies & Sweatshirt</h4>
-                            <p className='text-[15px] text-gray-500'>Explore Now!</p>
-                        </div>
-                        <div>
-                            <ArrowRight className='mt-[10px] text-slate-700'/>
+                <Link href={'/products'}>
+                    <div data-aos='fade-up'>
+                        <Image src={arrivalimg1} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
+                        <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
+                            <div>
+                                <h4 className='fontHoodie font-semibold tracking-tighter text-[20px]'>Hoodies & Sweatshirt</h4>
+                                <p className='text-[15px] text-gray-500'>Explore Now!</p>
+                            </div>
+                            <div>
+                                <ArrowRight className='mt-[10px] text-slate-700'/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
 
                 {/*--=== 2 ===--*/}
-                <div data-aos='fade-down'>
-                    <Image src={arrivalimg2} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
-                    <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
-                        <div>
-                            <h4 className='fontHoodie font-semibold tracking-tighter text-[20px]'>Coats & Parkas</h4>
-                            <p className='text-[15px] text-gray-500'>Explore Now!</p>
-                        </div>
-                        <div>
-                            <ArrowRight className='mt-[10px] text-slate-700'/>
+                <Link href={'/products'}>
+                    <div data-aos='fade-down'>
+                        <Image src={arrivalimg2} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
+                        <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
+                            <div>
+                                <h4 className='fontHoodie font-semibold tracking-tighter text-[20px]'>Coats & Parkas</h4>
+                                <p className='text-[15px] text-gray-500'>Explore Now!</p>
+                            </div>
+                            <div>
+                                <ArrowRight className='mt-[10px] text-slate-700'/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
+
 
                 {/*--=== 3 ===--*/}
-                <div data-aos='fade-up'>
-                    <Image src={arrivalimg3} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
-                    <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
-                        <div>
-                            <h4 className='fontHoodie font-semibold tracking-tighter text-[20px]'>Tees & T-Shirt</h4>
-                            <p className='text-[15px] text-gray-500'>Explore Now!</p>
-                        </div>
-                        <div>
-                            <ArrowRight className='mt-[10px] text-slate-700'/>
+                <Link href={'/products'}>
+                    <div data-aos='fade-up'>
+                        <Image src={arrivalimg3} alt='shopping website image' className='h-auto w-[250px] lg:w-[300px] xl:w-[350px]'/>
+                        <div className='flex justify-between w-[250px] lg:w-[300px] xl:w-[350px] pt-[10px]'>
+                            <div>
+                                <h4 className='fontHoodie font-semibold tracking-tighter text-[20px]'>Tees & T-Shirt</h4>
+                                <p className='text-[15px] text-gray-500'>Explore Now!</p>
+                            </div>
+                            <div>
+                                <ArrowRight className='mt-[10px] text-slate-700'/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
+
                 
             </div>
 

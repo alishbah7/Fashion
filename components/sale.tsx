@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import saleimg from '../public/images/saleimg.png';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link'
 
 
 export default function Sale(){
@@ -25,7 +26,7 @@ export default function Sale(){
                     </div>
                     <p data-aos='fade-right' className='pl-[20px] max-[1180px]:pl-[0px] max-[1180px]:text-center max-[1180px]:w-[100%] saleP'>Spend minimal $100 get 30% off <br /> voucher code for your next purchase</p>
                     <p data-aos='fade-left' className='max-[1180px]:text-center font-sans font-semibold pl-[20px] max-[360px]:pl-[0px]'>1 June - 10 June 2021 <p className='text-[15px] font-semibold'>*Terms & Conditions apply</p></p>
-                    <Button data-aos='fade-right' className='max-[360px]:ml-[0px]  max-[400px]:mb-[20px] ml-[20px] h-[40px] w-[100px]'>Shop Now</Button>
+                    <Link href={'/products'}><Button data-aos='fade-right' className='max-[360px]:ml-[0px]  max-[400px]:mb-[20px] ml-[20px] h-[40px] w-[100px]'>Shop Now</Button></Link>
                 </div>
 
             </div>

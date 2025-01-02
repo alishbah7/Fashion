@@ -21,7 +21,14 @@ const Cart = () => {
     setCartItems(cart);
   }, []);
 
-  //--=== QUANTITY INCREMENT & DECREMENT AND IF THE QUANTITY IS 0 THE ITEM WILL GET REMOVED  ===--//
+  //--=== UPDATE LOCAL STORAGE AND DISPATCH EVENT ===--//
+  const updateLocalStorage = (updatedCart: CartItem[]) => {
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setCartItems(updatedCart);
+    window.dispatchEvent(new CustomEvent('cartUpdated')); // Real-time cart update
+  };
+
+  //--=== QUANTITY INCREMENT & DECREMENT ===--//
   const updateQuantity = (id: number, increment: boolean) => {
     const updatedCart = cartItems.map((item) =>
       item.id === id
@@ -29,20 +36,18 @@ const Cart = () => {
         : item
     ).filter((item) => item.quantity > 0);
 
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    setCartItems(updatedCart);
+    updateLocalStorage(updatedCart);
   };
 
-  //--=== REMOVING ITEM WHEN CLICKED ON TRASH ===--//
+  //--=== REMOVE ITEM FROM CART ===--//
   const removeItem = (id: number) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    setCartItems(updatedCart);
+    updateLocalStorage(updatedCart);
   };
 
-  //--=== TOTAL OF ALL PRODUCTS FUNCTIONALITY ===--//
+  //--=== TOTAL AMOUNT ===--//
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-
+  
   return (
     <div>
 

@@ -20,12 +20,12 @@ const myProducts = [
 
 ];
 
-// Handle GET Request
+//--=== Handle GET Request ===--//
 export async function GET() {
   return NextResponse.json(myProducts);
 }
 
-// Handle POST Request
+//--=== Handle POST Request ===--//
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const { image, name, description, price } = body;
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
   return NextResponse.json(newProduct, { status: 201 });
 }
 
-// Handle other methods
+//--=== Handle other methods ===--//
 export async function OPTIONS() {
   return new NextResponse(null, {
     status: 405,
