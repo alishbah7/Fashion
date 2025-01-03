@@ -73,7 +73,7 @@ const Cart = () => {
                   <div className="flex-1 px-4">
                     <h3 className="text-[12px] sm:text-lg font-medium text-gray-800">{item.name}</h3>
                     <div className="mb-[10px]">
-                      <div className="text-[10px] sm:text-sm text-gray-500 flex gap-[5px]">
+                      <div className="text-sm text-gray-500 flex gap-[5px]">
                         <p>Quantity:</p>
                         <div className="flex gap-[5px]">
                           <p className="cursor-pointer mt-[-2px] text-[20px]" onClick={() => updateQuantity(item.id, false)}>-</p>
