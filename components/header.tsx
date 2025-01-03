@@ -36,6 +36,12 @@ export default function Header() {
 
   }, []);
 
+  //--=== CLOSING SHEET ON CLICKING LINKS ===--//
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const closeSheet = () => {
+    setIsSheetOpen(false);
+  };
+
   return (
     <header className='flex justify-between py-[25px] px-[5%]' data-aos='fade-down'>
 
@@ -66,16 +72,17 @@ export default function Header() {
       {/*--=== NAVLIST FOR SMALL DEVICES ===--*/}
       <div className='flex gap-[5px] md:hidden'>
         <Link href={'/cart'} className='font-sans'><Button>Cart<div className='py-[2px] px-[4px] bg-white rounded-full text-black flex items-center justify-center'>{cartQuantity}</div></Button></Link>
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger>
             <Menu className='block md:hidden w-[30px] h-[25px]'/>
           </SheetTrigger>
           <SheetContent>
             <div className='block md:hidden'>
               <ul className='flex flex-col gap-[40px]'>
-                  <li className='mt-[6px]'><Link href={'/'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Home</Link></li>
-                  <li className='mt-[6px]'><Link href={'/catalogue'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Catalogue</Link></li>
-                  <li className='mt-[6px]'><Link href={'/products'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg'>Products</Link></li>
+                  <li className='mt-[6px]'> <Image src={logo} alt='fashion logo' className='h-auto w-[100px] sm:w-[140px]'/></li>
+                  <li className='mt-[6px]'><Link href={'/'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg' onClick={closeSheet}>Home</Link></li>
+                  <li className='mt-[6px]'><Link href={'/catalogue'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg' onClick={closeSheet}>Catalogue</Link></li>
+                  <li className='mt-[6px]'><Link href={'/products'} className='font-sans font-medium uppercase md:text-[12px] lg:text-lg' onClick={closeSheet}>Products</Link></li>
               </ul>
             </div>
           </SheetContent>

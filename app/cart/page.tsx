@@ -76,7 +76,7 @@ const Cart = () => {
                       <div className="text-sm text-gray-500 flex gap-[5px]">
                         <p>Quantity:</p>
                         <div className="flex gap-[5px]">
-                          <p className="cursor-pointer mt-[-2px] text-[20px]" onClick={() => updateQuantity(item.id, false)}>-</p>
+                          <p className="cursor-pointer mt-[-2px] text-[25px]" onClick={() => updateQuantity(item.id, false)}>-</p>
                           <p>{item.quantity}</p>
                           <p className="cursor-pointer text-[15px]" onClick={() => updateQuantity(item.id, true)}>+</p>
                         </div>
